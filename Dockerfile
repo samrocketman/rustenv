@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 SHELL ["/bin/bash", "-euxo", "pipefail", "-c"]
 RUN \
   apt-get update; \
-  apt-get install -y curl vim git make gcc; \
+  apt-get install -y curl vim git make gcc gcc-aarch64-linux-gnu; \
   apt-get clean; \
   curl -sSfLo /usr/local/bin/download-utilities.sh https://raw.githubusercontent.com/samrocketman/yml-install-files/refs/heads/main/download-utilities.sh; \
   chmod 755 /usr/local/bin/download-utilities.sh
